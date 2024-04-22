@@ -1,1 +1,1 @@
-export { default } from "./src/stubRepo.js";
+export { default } from "./src/randomRGBColor.js";

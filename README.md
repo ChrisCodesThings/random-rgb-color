@@ -1,10 +1,10 @@
-# stub-repo <br> [![Test workflow status](https://github.com/ChrisCodesThings/stub-repo/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/stub-repo)](https://www.npmjs.com/package/@chriscodesthings/stub-repo) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+# random-rgb-color <br> [![Test workflow status](https://github.com/ChrisCodesThings/random-rgb-color/actions/workflows/test.yml/badge.svg)](../../actions/workflows/test.yml) [![NPM Version](https://img.shields.io/npm/v/@chriscodesthings/random-rgb-color)](https://www.npmjs.com/package/@chriscodesthings/random-rgb-color) [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-> **npm package template**
+> **Generates a random color in RGB format**
 
 ## Description
 
-Does what it says on the tin.
+Generates a random color in RGB format and returned as an array.
 
 ### See...
 - [Install/Usage](#install "Install and Usage")
@@ -17,38 +17,44 @@ Does what it says on the tin.
 ## Install
 
 ```sh
-npm install --save @chriscodesthings/stub-repo
+npm install --save @chriscodesthings/random-rgb-color
 ```
 
 ## Usage
 
 ```js
-import stubRepo from '@chriscodesthings/stub-repo';
+import randomRGBColor from '@chriscodesthings/random-rgb-color';
 
-console.log(stubRepo("hello world!"));
-// => true
+console.log(randomRGBColor());
+// => [78, 143, 28]
 ```
 
 ## Syntax
 
 ```js
-stubRepo(var);
+randomRGBColor((tone));
 ```
 
 ### Parameters
 
-- *var*: any
+- *tone* (optional): If true, colour is dark, if false, colour is light, based on YIQ calculation. 
 
 ### Return Value
 
-Returns something probably.
+Returns an array containing red, green and blue values from 0 to 255.
 
 ## Examples
 
 ```js
-// This is how you could use this in your code. 
+// random colour that should look ok with black text
+function pickBackgroundColour() {
+    return randomRGBColor(false);
+} 
 ```
 
 ## See Also...
 
-- [**stub-repo**: npm package template](https://github.com/ChrisCodesThings/stub-repo "npm package template")
+- [**random-css-hex-color**: Generates a random color in CSS hex format](https://github.com/ChrisCodesThings/random-css-hex-color "Generates a random color in CSS hex format")
+- [**color-object**: Simple, lightweight class to store and manipulate a color, and convert between formats](https://github.com/ChrisCodesThings/color-object "Simple, lightweight class to store and manipulate a color, and convert between formats")
+- [**random-in-range**: Picks a random number within a given range](https://github.com/ChrisCodesThings/random-in-range "Picks a random number within a given range")
+- [**Calculating Color Contrast**](https://24ways.org/2010/calculating-color-contrast/ "Calculating Color Contrast")

@@ -1,7 +1,7 @@
 {
-  "name": "@chriscodesthings/stub-repo",
+  "name": "@chriscodesthings/random-rgb-color",
   "version": "0.1.0",
-  "description": "npm package template",
+  "description": "Generates a random color in RGB format",
   "keywords": [
     "stub",
     "package",
@@ -9,10 +9,19 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ChrisCodesThings/stub-repo.git"
+    "url": "git+https://github.com/ChrisCodesThings/random-rgb-color.git"
   },
   "bugs": {
-    "url": "https://github.com/ChrisCodesThings/stub-repo/issues"
+    "url": "https://github.com/ChrisCodesThings/random-rgb-color/issues"
+  },
+  "dependencies": {
+    "@chriscodesthings/random-in-range": "^1.0.0",
+    "@chriscodesthings/rgb-color-is-dark": "^2.1.0"
+  },
+  "devDependencies": {
+    "auto-changelog": "^2.4.0",
+    "jest": "^29.7.0",
+    "typescript": "^5.4.5"
   },
   "main": "index.js",
   "type": "module",
@@ -30,12 +39,6 @@
     "test": "NODE_OPTIONS='--experimental-vm-modules' jest && npm run gen-dts",
     "version": "auto-changelog -p && git add CHANGELOG.md",
     "postversion": "git push && git push --tags"
-  },
-  "dependencies": {},
-  "devDependencies": {
-    "auto-changelog": "^2.4.0",
-    "jest": "^29.7.0",
-    "typescript": "^5.4.5"
   },
   "publishConfig": {
     "access": "public"
