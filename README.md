@@ -8,6 +8,7 @@ Generates a random color in RGB format and returned as an array.
 
 ### See...
 - [Install/Usage](#install "Install and Usage")
+- [Types](#types "Types")
 - [Syntax](#syntax "Syntax")
 - [Examples](#examples "Examples")
 - [See Also](#see-also "See Also")
@@ -28,6 +29,11 @@ import randomRGBColor from '@chriscodesthings/random-rgb-color';
 console.log(randomRGBColor());
 // => [78, 143, 28]
 ```
+
+## Types
+
+This package uses types from:
+- [**basic-color-types**: Defines named types for common color formats](https://github.com/ChrisCodesThings/basic-color-types "Defines named types for common color formats")
 
 ## Syntax
 

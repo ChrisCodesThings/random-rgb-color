@@ -2,14 +2,15 @@
 
 import random from '@chriscodesthings/random-in-range';
 import isDark from '@chriscodesthings/rgb-color-is-dark';
+import * as Types from "@chriscodesthings/basic-color-types";
 
 /**
  * Picks a random colour in RGB format
  * @param {boolean} tone (optional) if true generates a dark colour, if false generates a light colour
- * @returns {[number, number, number]}
+ * @returns {Types.rgbColor}
  */
 export default function randomRGBColor(tone) {
-    /** @type {[number, number, number]} */
+    /** @type {Types.rgbColor} */
     let col = [random(255), random(255), random(255)];
 
     if (typeof tone === 'boolean') {
